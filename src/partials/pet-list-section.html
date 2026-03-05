@@ -1,15 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
+
   <body>
     <div id="loader" class="is-hidden"></div>
-    <section class="pets-section">
+    <section class="pets-section" id="pets-section">
       <div class="container">
         <h2 class="section-title">Наші хвостики</h2>
         <p class="section-subtitle">Вони дуже чекають на знайомство з вами</p>
@@ -28,7 +20,7 @@
     <!-- Модальне вікно -->
     <div class="modal-backdrop is-hidden" id="modal-pet">
       <div class="modal-content">
-        <button type="modal-close" id="modal-close">×</button>
+        <button type="modal-close" id="modal-close"></button>
         <div id="modal-data"></div>
       </div>
     </div>

@@ -1,19 +1,15 @@
-//вставляти перед функцєю. (вона остання) document.addEventListener('DOMContentLoaded', () => {
-//  fetchCategories();
-  //fetchAnimals(1, '');
-//});
-
 
 document.addEventListener('click', e => {
   const btn = e.target.closest('.learn-more-btn');
   if (!btn) return;
 
-    const petId = btn.dataset.id;
-    console.log("Клік по Learn More! ID тварини:", petId);
-  openPetModal(petId);
+  const petId = btn.dataset.id;
+  console.log("Клік по Learn More! ID тварини:", petId);
+
+  openLocalPetModal(petId); // ← твоя функція
 });
 
-function openPetModal(petId) {
+function openLocalPetModal(petId) {
   const modal = document.querySelector('#modal-pet');
   if (!modal) return;
 
@@ -43,3 +39,4 @@ function openPetModal(petId) {
   };
   document.addEventListener('keydown', escHandler);
 }
+
