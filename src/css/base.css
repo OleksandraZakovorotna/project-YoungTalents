@@ -42,9 +42,23 @@
   --color-scheme-2-accent: var(--color-white);
   --color-scheme-2-foreground: var(--color-mariner-dark);
   --color-red: #ae0000;
-}
-
-:root {
   --font-family: "IBM Plex Sans", sans-serif;
   --second-family: "Open Sans", sans-serif;
+  --hero-overlay: rgba(0, 0, 0, 0.6);
+  --hero-overlay-transparent: rgba(0, 0, 0, 0);
+}
+
+body {
+  background-color: var(--color-scheme-1-background);
+  color: var(--color-scheme-1-text);
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
