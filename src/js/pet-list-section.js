@@ -1,5 +1,5 @@
-import { initLearnMoreButtons } from './learn-more-function.js';  
-  const API_BASE = 'https://paw-hut.b.goit.study/api';
+import { initLearnMoreButtons } from './learn-more-function.js';
+const API_BASE = 'https://paw-hut.b.goit.study/api';
 const petsList = document.getElementById('pets-list');
 const filterList = document.getElementById('filter-list');
 const loadMoreBtn = document.getElementById('load-more');
@@ -11,77 +11,77 @@ let currentCategoryId = '';
 const getLimit = () => (window.innerWidth >= 1440 ? 9 : 8);
 
 const toggleLoader = show => {
-  if (show) loader.classList.remove('is-hidden');
-  else loader.classList.add('is-hidden');
+  if (show) loader.classList.remove('is-hidden');
+  else loader.classList.add('is-hidden');
 };
 
 // 1. Category
 
 async function fetchCategories() {
-  toggleLoader(true);
+  toggleLoader(true);
 
-  try {
-    const response = await fetch(`${API_BASE}/categories`);
-    const categories = await response.json();
+  try {
+    const response = await fetch(`${API_BASE}/categories`);
+    const categories = await response.json();
 
-    let markup = `<li><button type="button" class="filter-btn active" data-id="">Всі</button></li>`;
+    let markup = `<li><button type="button" class="filter-btn active" data-id="">Всі</button></li>`;
 
-    markup += categories
-      .map(
-        cat =>
-          `<li><button type="button" class="filter-btn" data-id="${cat._id}">${cat.name}</button></li>`
-      )
-      .join('');
+    markup += categories
+      .map(
+        cat =>
+          `<li><button type="button" class="filter-btn" data-id="${cat._id}">${cat.name}</button></li>`
+      )
+      .join('');
 
-    filterList.innerHTML = markup;
-  } catch (error) {
-    console.error('Помилка завантаження категорій:', error);
-  } finally {
-    toggleLoader(false);
-  }
+    filterList.innerHTML = markup;
+  } catch (error) {
+    console.error('Помилка завантаження категорій:', error);
+  } finally {
+    toggleLoader(false);
+  }
 }
 
 // 2. Animals
 
 async function fetchAnimals(page = 1, categoryId = '') {
-  toggleLoader(true);
+  toggleLoader(true);
 
-  const limit = getLimit();
+  const limit = getLimit();
 
-  let url = `${API_BASE}/animals?page=${page}&limit=${limit}`;
+  let url = `${API_BASE}/animals?page=${page}&limit=${limit}`;
 
-  if (categoryId && categoryId !== '') {
-    url += `&categoryId=${categoryId}`;
-  }
+  if (categoryId && categoryId !== '') {
+    url += `&categoryId=${categoryId}`;
+  }
 
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
-    const animals = data.animals || [];
-    const totalItems = data.totalItems || 0;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const animals = data.animals || [];
+    const totalItems = data.totalItems || 0;
 
-    renderCards(animals, page === 1);
+    renderCards(animals, page === 1);
 
-    const currentDisplayed = petsList.children.length;
+    const currentDisplayed = petsList.children.length;
 
-    if (currentDisplayed >= totalItems || animals.length === 0) {
-      loadMoreBtn.style.display = 'none';
-    } else {
-      loadMoreBtn.style.display = 'block';
-    }
-  } catch (error) {
-    console.error('Помилка завантаження тварин:', error);
-  } finally {
-    toggleLoader(false);
-  }
+    if (currentDisplayed >= totalItems || animals.length === 0) {
+      loadMoreBtn.style.display = 'none';
+    } else {
+      loadMoreBtn.style.display = 'block';
+    }
+  } catch (error) {
+    console.error('Помилка завантаження тварин:', error);
+  } finally {
+    toggleLoader(false);
+  }
 }
 
 // 3. Pet card
 
 function renderCards(animals, isNewSearch) {
-  const markup = animals
-    .map(
-      pet => `
+  const markup = animals
+    .map(
+      pet => `
     <li class="pet-card">
       <picture class="pet-img-thumb">
         <source srcset="${pet.image}" media="(min-width: 320px)">
@@ -114,41 +114,41 @@ function renderCards(animals, isNewSearch) {
         </button>
     </li>
   `
-    )
-    .join('');
+    )
+    .join('');
 
-  if (isNewSearch) {
-    petsList.innerHTML = markup;
-  } else {
-    petsList.insertAdjacentHTML('beforeend', markup);
-  }
+  if (isNewSearch) {
+    petsList.innerHTML = markup;
+  } else {
+    petsList.insertAdjacentHTML('beforeend', markup);
+  }
 }
 
 // 4. Event
 
 filterList.addEventListener('click', async e => {
-  const btn = e.target.closest('.filter-btn');
-  if (!btn) return;
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
 
-  document
-    .querySelectorAll('.filter-btn')
-    .forEach(b => b.classList.remove('active'));
+  document
+    .querySelectorAll('.filter-btn')
+    .forEach(b => b.classList.remove('active'));
 
-  btn.classList.add('active');
+  btn.classList.add('active');
 
-  currentCategoryId = btn.dataset.id;
-  currentPage = 1;
+  currentCategoryId = btn.dataset.id;
+  currentPage = 1;
 
-  await fetchAnimals(currentPage, currentCategoryId);
+  await fetchAnimals(currentPage, currentCategoryId);
 });
 
 loadMoreBtn.addEventListener('click', async () => {
-  currentPage += 1;
-  await fetchAnimals(currentPage, currentCategoryId);
+  currentPage += 1;
+  await fetchAnimals(currentPage, currentCategoryId);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetchCategories(); // ← ЛОАДЕР СПРАЦЮЄ ВСЕРЕДИНІ fetchCategories
-  fetchAnimals(1, ''); // ← ЛОАДЕР СПРАЦЮЄ ВСЕРЕДИНІ fetchAnimals
-  initLearnMoreButtons();
+  fetchCategories(); // ← ЛОАДЕР СПРАЦЮЄ ВСЕРЕДИНІ fetchCategories
+  fetchAnimals(1, ''); // ← ЛОАДЕР СПРАЦЮЄ ВСЕРЕДИНІ fetchAnimals
+  initLearnMoreButtons();
 });
