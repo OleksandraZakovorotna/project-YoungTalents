@@ -89,7 +89,18 @@ function renderCards(animals, isNewSearch) {
           <div class="pet-descr">
         <p class="pet-short-desc">${pet.shortDescription}</p>
         </div>
-        <button type="button" class="learn-more-btn" data-id="${pet._id}">Дізнатись більше</button>
+        <button
+   type="button"
+   class="learn-more-btn"
+   data-name="${pet.name}"
+   data-species="${pet.species}"
+   data-img="${pet.image}"
+   data-desc="${pet.shortDescription}"
+   data-age="${pet.age}"
+   data-sex="${pet.gender}"
+ >
+   Дізнатись більше
+ </button>
     </li>
   `
     )
