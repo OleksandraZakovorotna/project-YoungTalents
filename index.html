@@ -13,74 +13,57 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/project-YoungTalents/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-YoungTalents/assets/vendor-DZ-agT1-.js">
+    <link rel="modulepreload" crossorigin href="/project-YoungTalents/assets/vendor-D7BFGLpI.js">
     <link rel="stylesheet" crossorigin href="/project-YoungTalents/assets/vendor-CtFclebB.css">
-    <link rel="stylesheet" crossorigin href="/project-YoungTalents/assets/index-D6X0tw3F.css">
+    <link rel="stylesheet" crossorigin href="/project-YoungTalents/assets/index-Cetuily1.css">
   </head>
   <body>
     
 
     <main>
-      <section class="hero show"  id="hero-section">
-  <div class="container">
+      <section class="hero show" id="hero-section">
+  <div class="cont">
     <div class="hero-content">
-      <h1 class="hero-title">Кожне життя має значення. Знайди свого вірного друга</h1>
+      <h1 class="hero-title">
+        Кожне життя має значення. Знайди свого вірного друга
+      </h1>
       <p class="hero-text">
-        Сотні котиків та собачок у притулку Хатинка Лапок чекають на свою родину. Подаруйте їм дім.
+        Сотні котиків та собачок у притулку Хатинка Лапок чекають на свою
+        родину. Подаруйте їм дім.
       </p>
-        <a href="#success-story-section" class="hero-button">
-          Подивитись історії
-        </a>
+      <a href="#success-story-section" class="hero-button">
+        Подивитись історії
+      </a>
     </div>
   </div>
-  <!-- Лоадер 
-<div id="loader" class="is-hidden">
-    Може бути спінер 
-  <span>Завантаження...</span>
-</div> -->
-
 </section>
-тзь штіефд
+
       <div id="loader" class="is-hidden"></div>
-
 <section class="pets-section" id="pet-list-section">
-        
   <div class="container">
-            
-    <h2 class="section-title">Наші хвостики</h2>
-            
-    <p class="section-subtitle">Вони дуже чекають на знайомство з вами</p>
-            
+    <div class="title-container">
+      <h2 class="section-title">Наші хвостики</h2>
+      <p class="section-subtitle">Вони дуже чекають на знайомство з вами</p>
+    </div>
     <ul class="filter-list" id="filter-list">
-                
       <li>
-                    <button class="filter-btn active" data-category="all">
-          Всі
-        </button>
-                  
+        <button class="filter-btn active" data-category="all">Всі</button>
       </li>
-              
     </ul>
-            
     <ul class="pets-list" id="pets-list"></ul>
-            <button type="button" class="load-more-btn" id="load-more">
-                Показати більше         
+  </div>
+  <div class="load-more">
+    <button type="button" class="load-more-btn" id="load-more">
+      Показати більше
     </button>
-          
   </div>
-      
 </section>
-
-    <!-- Модальне вікно -->
-    
+<!-- Модальне вікно -->
 <div class="modal-backdrop is-hidden" id="modal-pet">
-        
   <div class="modal-content">
-            <button type="modal-close" id="modal-close"></button>         
+    <button type="modal-close" id="modal-close"></button>
     <div id="modal-data"></div>
-          
   </div>
-      
 </div>
 
       <section class="gallery" id="about-us-secion">
@@ -315,20 +298,16 @@
     <nav class="footer-nav-wraper">
       <ul class="footer-nav-list">
         <li class="footer-nav-item">
-          <a class="footer-nav-link" href="./about-us-secion.html">Про нас</a>
+          <a class="footer-nav-link" href="#about-us-secion">Про нас</a>
         </li>
         <li class="footer-nav-item">
-          <a class="footer-nav-link" href="./pet-list-section.html"
-            >Знайти друга</a
-          >
+          <a class="footer-nav-link" href="#pet-list-section">Знайти друга</a>
         </li>
         <li class="footer-nav-item">
-          <a class="footer-nav-link" href="./faq-section.html"
-            >Часті запитання</a
-          >
+          <a class="footer-nav-link" href="#faq-section">Часті запитання</a>
         </li>
         <li class="footer-nav-item">
-          <a class="footer-nav-link" href="./success-story-section.html"
+          <a class="footer-nav-link" href="#success-story-section"
             >Історії успіху</a
           >
         </li>
@@ -368,58 +347,67 @@
 
 
     <div class="pet-backdrop is-hidden" data-pet-modal-backdrop>
-    <div class="pet-modal" role="dialog" aria-modal="true" aria-labelledby="petModalTitle">
-        <button class="pet-modal__close" type="button" aria-label="Close" data-pet-modal-close>
-            <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.5996%209.9248C21.7639%209.9248%2021.8659%209.97331%2021.9463%2010.0537C22.0265%2010.134%2022.0751%2010.2355%2022.0752%2010.3994C22.0752%2010.5636%2022.0266%2010.6657%2021.9463%2010.7461L16.6924%2016L17.0459%2016.3535L21.9463%2021.2529C22.0267%2021.3333%2022.0752%2021.4355%2022.0752%2021.5996C22.0752%2021.7639%2022.0267%2021.8659%2021.9463%2021.9463C21.8659%2022.0267%2021.7639%2022.0752%2021.5996%2022.0752C21.4355%2022.0752%2021.3333%2022.0267%2021.2529%2021.9463L16.3535%2017.0459L16%2016.6924L10.7461%2021.9463C10.6657%2022.0266%2010.5636%2022.0752%2010.3994%2022.0752C10.2355%2022.0751%2010.134%2022.0265%2010.0537%2021.9463C9.97331%2021.8659%209.9248%2021.7639%209.9248%2021.5996C9.92484%2021.4355%209.97334%2021.3333%2010.0537%2021.2529L15.3066%2016L14.9531%2015.6465L10.0537%2010.7461C9.97331%2010.6657%209.9248%2010.5637%209.9248%2010.3994C9.92488%2010.2354%209.97337%2010.134%2010.0537%2010.0537C10.134%209.97337%2010.2354%209.92488%2010.3994%209.9248C10.5637%209.9248%2010.6657%209.97331%2010.7461%2010.0537L15.6465%2014.9531L16%2015.3066L21.2529%2010.0537C21.3333%209.97334%2021.4355%209.92484%2021.5996%209.9248Z'%20fill='white'%20stroke='%2302060A'/%3e%3c/svg%3e" alt="close" width="24" height="24" class="pet-modal__close-icon" />
-        </button>
+  <div
+    class="pet-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="petModalTitle"
+  >
+    <button
+      class="pet-modal__close"
+      type="button"
+      aria-label="Close"
+      data-pet-modal-close
+    >
+      <svg width="24" height="24">
+        <use href="../public/icons.svg#icon-close"></use>
+      </svg>
+    </button>
 
-        <div class="pet-backdrop is-hidden" data-pet-modal-backdrop>
-              <div     class="pet-modal"     role="dialog"     aria-modal="true"     aria-labelledby="petModalTitle"   >
-                    <button       class="pet-modal__close"       type="button"       aria-label="Close"
-                          data-pet-modal-close     >
-                          <svg width="24" height="24">
-                                <use href="../public/icons.svg#icon-close"></use>
-                              </svg>
-                        </button>
-        
-                    </button>
-                    <div class="pet-modal__layout">
-                          <div class="pet-modal__img-wrap">
-                                <img           class="pet-modal__img"           src=""           alt=""           loading="lazy"
-                                      data-pet-modal-img          />
-                              </div>
-        
-                          <div class="pet-modal__content">
-                                <p class="pet-modal__type" data-pet-modal-type>Собака</p>
-        
-                                <h2 class="pet-modal__name" id="petModalTitle" data-pet-modal-name>
-                                      Джек
-                                    </h2>
-        
-                                <p class="pet-modal__meta" data-pet-modal-meta>4 роки • Хлопчик</p>
-        
-                                <div class="pet-modal__scroll">
-                                      <h3 class="pet-modal__subtitle">Опис:</h3>
-                                      <p class="pet-modal__text" data-pet-modal-desc></p>
-        
-                                      <h3 class="pet-modal__subtitle">Здоров'я:</h3>
-                                      <p class="pet-modal__text" data-pet-modal-health></p>
-        
-                                      <h3 class="pet-modal__subtitle">Поведінка:</h3>
-                                      <p class="pet-modal__text" data-pet-modal-behavior></p>
-                                    </div>
-        
-                                <button class="pet-modal__btn" type="button" data-pet-modal-adopt>
-                                      Взяти додому
-                                    </button>
-                              </div>
-                        </div>
-                  </div>
+    </button>
+    <div class="pet-modal__layout">
+      <div class="pet-modal__img-wrap">
+        <img
+          class="pet-modal__img"
+          src=""
+          alt=""
+          loading="lazy"
+          data-pet-modal-img
+        />
+      </div>
+
+      <div class="pet-modal__content">
+        <p class="pet-modal__type" data-pet-modal-type>Собака</p>
+
+        <h2 class="pet-modal__name" id="petModalTitle" data-pet-modal-name>
+          Джек
+        </h2>
+
+        <p class="pet-modal__meta" data-pet-modal-meta>4 роки • Хлопчик</p>
+
+        <div class="pet-modal__scroll">
+          <h3 class="pet-modal__subtitle">Опис:</h3>
+          <p class="pet-modal__text" data-pet-modal-desc></p>
+
+          <h3 class="pet-modal__subtitle">Здоров'я:</h3>
+          <p class="pet-modal__text" data-pet-modal-health></p>
+
+          <h3 class="pet-modal__subtitle">Поведінка:</h3>
+          <p class="pet-modal__text" data-pet-modal-behavior></p>
         </div>
+
+        <button class="pet-modal__btn" type="button" data-pet-modal-adopt>
+          Взяти додому
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="backdrop is-hidden">
   <div class="order-modal-container">
-    <button type="button" class="order-modal-close-btn">
-      <svg width="32" height="32">
+    <!-- замінити X на svg іконку -->
+    <button class="order-modal-close-btn" type="button">
+      <svg width="24" height="24">
         <use href="../public/icons.svg#icon-close"></use>
       </svg>
     </button>
