@@ -42,6 +42,7 @@
   --color-scheme-2-accent: var(--color-white);
   --color-scheme-2-foreground: var(--color-mariner-dark);
   --color-red: #ae0000;
+
   --font-family: "IBM Plex Sans", sans-serif;
   --second-family: "Open Sans", sans-serif;
 }
