@@ -13,18 +13,241 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/project-YoungTalents/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/project-YoungTalents/assets/vendor-Dn2PEXfL.js">
-    <link rel="stylesheet" crossorigin href="/project-YoungTalents/assets/vendor-BCNh8ils.css">
-    <link rel="stylesheet" crossorigin href="/project-YoungTalents/assets/index-95GH613T.css">
+    <link rel="modulepreload" crossorigin href="/project-YoungTalents/assets/vendor-QecD1xB9.js">
+    <link rel="stylesheet" crossorigin href="/project-YoungTalents/assets/vendor-GAl4Yz9z.css">
+    <link rel="stylesheet" crossorigin href="/project-YoungTalents/assets/index-FsNUrEcF.css">
   </head>
   <body>
     
 
     <main>
       
-      
-      
-      
+      <div id="loader" class="is-hidden"></div>
+
+<section class="pets-section" id="pet-list-section">
+        
+  <div class="container">
+            
+    <h2 class="section-title">Наші хвостики</h2>
+            
+    <p class="section-subtitle">Вони дуже чекають на знайомство з вами</p>
+            
+    <ul class="filter-list" id="filter-list">
+                
+      <li>
+                    <button class="filter-btn active" data-category="all">
+          Всі
+        </button>
+                  
+      </li>
+              
+    </ul>
+            
+    <ul class="pets-list" id="pets-list"></ul>
+            <button type="button" class="load-more-btn" id="load-more">
+                Показати більше         
+    </button>
+          
+  </div>
+      
+</section>
+
+    <!-- Модальне вікно -->
+    
+<div class="modal-backdrop is-hidden" id="modal-pet">
+        
+  <div class="modal-content">
+            <button type="modal-close" id="modal-close"></button>         
+    <div id="modal-data"></div>
+          
+  </div>
+      
+</div>
+
+      <section class="gallery" id="about-us-secion">
+  <h2 class="gallery__title">Чому Хатинка Лапок</h2>
+  <div class="slider-container">
+    <div class="about-swiper">
+      <div class="swiper-wrapper"></div>
+    </div>
+
+    <div class="controls-wrapper">
+      <div class="about-swiper-pagination"></div>
+      <div class="navigation-buttons">
+        <button class="swiper-button-prev">
+          <svg class="input_icon" width="24" height="24">
+            <use href="/project-YoungTalents/icons.svg#icon-arrow-back"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next">
+          <svg class="input_icon" width="24" height="24">
+            <use href="/project-YoungTalents/icons.svg#icon-arrow-forward"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="container accordion-container faq-section" id="faq-section">
+    <h2 class="mainText">Все, що ви хотіли знати</h2>
+
+    <div class="ac">
+      <h2 class="ac-header">
+        <button type="button" class="ac-trigger">
+            <p class="accordion-header-text">Я мрію про пухнастика! Що мені потрібно зробити, щоб забрати хвостика додому?</p>
+            <div class="ac-icon-wrapper">
+              <svg class="ac-icon" width="24" height="24">
+                <use href="icons.svg#icon-add"></use>
+              </svg>
+            </div>
+        </button>
+      </h2>
+
+      <div class="ac-panel">
+        <p class="ac-text">
+            Це чудово, що ви готові подарувати дім одному з наших підопічних! Ми дуже раді будемо вам у цьому допомогти. Процес «усиновлення» у нас простий та зрозумілий:
+        </p>
+        <ol class="ac-list-container-num">
+            <li class="ac-list-item">
+                Оберіть друга: Придивіться до наших хвостиків у розділі «Знайди друга».
+            </li>
+            <li class="ac-list-item">
+                Залиште заявку: Коли відчуєте, що це «ваша» тваринка, натискайте кнопку «Взяти додому» та заповніть коротку анкету.
+            </li>
+            <li class="ac-list-item">
+                Поговоріть з куратором: Наш волонтер зателефонує вам, щоб познайомитись ближче, розповісти про характер тваринки та відповісти на всі ваші питання.
+            </li>
+            <li class="ac-list-item">
+                Приїжджайте знайомитись: Якщо ви ідеально підходите одне одному, ми домовимось про зустріч у притулку
+            </li>
+            <li class="ac-list-item">
+                Дорога додому: Після знайомства та підписання договору про відповідальне утримання, ваш новий друг поїде з вами у своє нове, щасливе життя!
+            </li>
+          </ol>
+      </div>
+    </div>
+  
+    <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+              <p class="accordion-header-text">Як мені найкраще підготувати свій дім та родину до появи хвостика?</p>
+              <div class="ac-icon-wrapper">
+                <svg class="ac-icon" width="24" height="24">
+                  <use href="icons.svg#icon-add"></use>
+                </svg>
+              </div>
+          </button>
+        </h2>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Чудове питання, яке показує вашу турботу! Переїзд — це завжди невеликий стрес для тваринки, але правильна підготовка зробить цей процес легким і радісним. Ось кілька порад:
+          </p>
+          <ul class="ac-list-container">
+              <li class="ac-list-item">
+                Безпечний простір: Переконайтесь, що на вікнах є сітки, а дроти та побутова хімія сховані.
+              </li>
+              <li class="ac-list-item">
+                Особисті речі: Підготуйте для хвостика дві мисочки (для їжі та води), лежанку чи будиночок, лоток з наповнювачем для котика або повідець і нашийник для собачки
+              </li>
+              <li class="ac-list-item">
+                Сімейна розмова: Обговоріть з рідними майбутні обов'язки. Важливо, щоб усі були готові до появи нового мешканця
+              </li>
+              <li class="ac-list-item">
+                Терпіння та любов: Дайте тваринці час, щоб звикнути. Не квапте її, будьте поруч, розмовляйте лагідним голосом — і ваша любов творитиме дива!
+              </li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+              <p class="accordion-header-text">Чи можу я бути впевненим, що тваринка здорова? Розкажіть про щеплення.</p>
+              <div class="ac-icon-wrapper">
+                <svg class="ac-icon" width="24" height="24">
+                  <use href="icons.svg#icon-add"></use>
+                </svg>
+              </div>
+          </button>
+        </h2>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Так, звісно. Здоров'я наших підопічних — наш головний пріоритет. Кожна тваринка, яка потрапляє до нас, проходить повний огляд у ветеринара. Ми гарантуємо, що:
+          </p>
+          <ul class="ac-list-container">
+              <li class="ac-list-item">
+                Усі хвостики оброблені від бліх та глистів.
+              </li>
+              <li class="ac-list-item">
+                Усі вакциновані комплексною вакциною за віком.
+              </li>
+              <li class="ac-list-item">
+                Дорослі тварини (зазвичай від 6-8 місяців) стерилізовані/кастровані.
+              </li>
+          </ul>
+          <p class="ac-text">
+            Разом із тваринкою ви обов'язково отримаєте її ветеринарний паспорт з усіма відмітками. Якщо у когось є особливі потреби у догляді чи харчуванні, ми чесно і детально про це розповімо.
+          </p>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+              <p class="accordion-header-text">Я дуже хочу допомогти, але поки не готовий до адопції. Чим я можу підтримати «Хатинку лапок»?</p>
+              <div class="ac-icon-wrapper">
+                <svg class="ac-icon" width="24" height="24">
+                  <use href="icons.svg#icon-add"></use>
+                </svg>
+          </button>
+        </h2>
+
+        <div class="ac-panel">
+          <p class="ac-text">
+            Дякуємо вам за велике серце та бажання допомогти! Кожна допомога для нас безцінна. Навіть якщо ви не можете взяти тваринку, ви можете стати її янголом-охоронцем. Ось як:
+          </p>
+          <ul class="ac-list-container">
+              <li class="ac-list-item">
+                  Допомогти фінансово: Ваша пожертва піде на корм, ліки, оплату комунальних послуг та зарплату персоналу.
+              </li>
+              <li class="ac-list-item">
+                  Стати волонтером: Нам завжди потрібні люблячі руки для прогулянок з собачками, прибирання та, найголовніше, для спілкування з тваринками.              </li>
+              <li class="ac-list-item">
+                  Поговоріть з куратором: Наш волонтер зателефонує вам, щоб познайомитись ближче, розповісти про характер тваринки та відповісти на всі ваші питання.
+              </li>
+              <li class="ac-list-item">
+                  Подарувати необхідне: Ми завжди раді кормам, лікам, наповнювачам для лотків, іграшкам, теплим ковдрам.              </li>
+              <li class="ac-list-item">
+                  Допомогти інформаційно: Найпростіший, але дуже дієвий спосіб — розповідати про нас у соцмережах. Можливо, саме ваш репост допоможе комусь знайти свою долю!              </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ac">
+        <h2 class="ac-header">
+          <button type="button" class="ac-trigger">
+              <p class="accordion-header-text">Мені сподобалась одна з ваших тваринок на сайті. Чи можу я приїхати, щоб познайомитися з нею особисто?</p>
+              <div class="ac-icon-wrapper">
+                <svg class="ac-icon" width="24" height="24">
+                  <use href="icons.svg#icon-add"></use>
+                </svg>
+              </div>
+          </button>
+        </h2>
+        
+        <div class="ac-panel">
+          <p class="ac-text">
+            Авжеж! Ми віримо, що справжня магія стається лише при особистій зустрічі. Щоб знайомство було комфортним і для вас, і для тваринки, ми просимо вас спочатку заповнити онлайн-заявку на нашому сайті.
+          </p>
+          <p class="ac-text">
+            Після цього з вами зв'яжеться куратор тваринки, щоб домовитись про зручний час для вашого візиту. Такий підхід дозволяє нам приділити вам максимум уваги та уникнути зайвого стресу для наших підопічних. З нетерпінням чекаємо на знайомство!
+          </p>
+        </div>
+      </div>
+</section>
       <section class="feedbacks-section" id="success-story-section">
     <div class="container feedbacks-container">
         <h2 class="feedbacks-title">Щасливі історії, що надихають</h2>
@@ -60,10 +283,164 @@
 </section>
     </main>
 
-    
+    <footer class="footer">
+  <div class="footer-wraper">
+    <div class="footer-logo-wrap">
+      <a class="footer-logo-link" href="./index.html">
+        <svg class="footer-logo-icon" width="298" height="97">
+          <use href="/project-YoungTalents/assets/icons-_ywVuSNm.svg#icon-logo"></use>
+        </svg>
+      </a>
+    </div>
 
-    
-    
+    <nav class="footer-nav-wraper">
+      <ul class="footer-nav-list">
+        <li class="footer-nav-item">
+          <a class="footer-nav-link" href="./about-us-secion.html">Про нас</a>
+        </li>
+        <li class="footer-nav-item">
+          <a class="footer-nav-link" href="./pet-list-section.html"
+            >Знайти друга</a
+          >
+        </li>
+        <li class="footer-nav-item">
+          <a class="footer-nav-link" href="./faq-section.html"
+            >Часті запитання</a
+          >
+        </li>
+        <li class="footer-nav-item">
+          <a class="footer-nav-link" href="./success-story-section.html"
+            >Історії успіху</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="footer-social-list">
+      <li class="footer-social-item">
+        <a
+          class="footer-social-link"
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="footer-social-icon" width="32" height="32">
+            <use href="/project-YoungTalents/assets/icons-_ywVuSNm.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer-social-item">
+        <a
+          class="footer-social-link"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="footer-social-icon" width="32" height="32">
+            <use href="../public/icons.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <p class="footer-copyright">© 2025 Хатинка лапок. Всі права захищені.</p>
+</footer>
+
+
+    <div class="pet-backdrop is-hidden" data-pet-modal-backdrop>
+    <div class="pet-modal" role="dialog" aria-modal="true" aria-labelledby="petModalTitle">
+        <button class="pet-modal__close" type="button" aria-label="Close" data-pet-modal-close>
+            <img src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.5996%209.9248C21.7639%209.9248%2021.8659%209.97331%2021.9463%2010.0537C22.0265%2010.134%2022.0751%2010.2355%2022.0752%2010.3994C22.0752%2010.5636%2022.0266%2010.6657%2021.9463%2010.7461L16.6924%2016L17.0459%2016.3535L21.9463%2021.2529C22.0267%2021.3333%2022.0752%2021.4355%2022.0752%2021.5996C22.0752%2021.7639%2022.0267%2021.8659%2021.9463%2021.9463C21.8659%2022.0267%2021.7639%2022.0752%2021.5996%2022.0752C21.4355%2022.0752%2021.3333%2022.0267%2021.2529%2021.9463L16.3535%2017.0459L16%2016.6924L10.7461%2021.9463C10.6657%2022.0266%2010.5636%2022.0752%2010.3994%2022.0752C10.2355%2022.0751%2010.134%2022.0265%2010.0537%2021.9463C9.97331%2021.8659%209.9248%2021.7639%209.9248%2021.5996C9.92484%2021.4355%209.97334%2021.3333%2010.0537%2021.2529L15.3066%2016L14.9531%2015.6465L10.0537%2010.7461C9.97331%2010.6657%209.9248%2010.5637%209.9248%2010.3994C9.92488%2010.2354%209.97337%2010.134%2010.0537%2010.0537C10.134%209.97337%2010.2354%209.92488%2010.3994%209.9248C10.5637%209.9248%2010.6657%209.97331%2010.7461%2010.0537L15.6465%2014.9531L16%2015.3066L21.2529%2010.0537C21.3333%209.97334%2021.4355%209.92484%2021.5996%209.9248Z'%20fill='white'%20stroke='%2302060A'/%3e%3c/svg%3e" alt="close" width="24" height="24" class="pet-modal__close-icon" />
+        </button>
+
+        <div class="pet-backdrop is-hidden" data-pet-modal-backdrop>
+              <div     class="pet-modal"     role="dialog"     aria-modal="true"     aria-labelledby="petModalTitle"   >
+                    <button       class="pet-modal__close"       type="button"       aria-label="Close"
+                          data-pet-modal-close     >
+                          <svg width="24" height="24">
+                                <use href="../public/icons.svg#icon-close"></use>
+                              </svg>
+                        </button>
+        
+                    </button>
+                    <div class="pet-modal__layout">
+                          <div class="pet-modal__img-wrap">
+                                <img           class="pet-modal__img"           src=""           alt=""           loading="lazy"
+                                      data-pet-modal-img          />
+                              </div>
+        
+                          <div class="pet-modal__content">
+                                <p class="pet-modal__type" data-pet-modal-type>Собака</p>
+        
+                                <h2 class="pet-modal__name" id="petModalTitle" data-pet-modal-name>
+                                      Джек
+                                    </h2>
+        
+                                <p class="pet-modal__meta" data-pet-modal-meta>4 роки • Хлопчик</p>
+        
+                                <div class="pet-modal__scroll">
+                                      <h3 class="pet-modal__subtitle">Опис:</h3>
+                                      <p class="pet-modal__text" data-pet-modal-desc></p>
+        
+                                      <h3 class="pet-modal__subtitle">Здоров'я:</h3>
+                                      <p class="pet-modal__text" data-pet-modal-health></p>
+        
+                                      <h3 class="pet-modal__subtitle">Поведінка:</h3>
+                                      <p class="pet-modal__text" data-pet-modal-behavior></p>
+                                    </div>
+        
+                                <button class="pet-modal__btn" type="button" data-pet-modal-adopt>
+                                      Взяти додому
+                                    </button>
+                              </div>
+                        </div>
+                  </div>
+        </div>
+    <div class="backdrop is-hidden">
+  <div class="order-modal-container">
+    <button type="button" class="order-modal-close-btn">
+      <svg width="32" height="32">
+        <use href="../public/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <h2 class="order-modal-title">Залишіть заявку на знайомство</h2>
+
+    <form class="order-modal-form">
+      <label for="name" class="order-modal-form-label">Ім’я*</label>
+      <input
+        type="text"
+        id="name"
+        class="order-modal-form-input"
+        name="name"
+        placeholder="Андрій"
+        required
+      />
+
+      <label for="phone" class="order-modal-form-label">Телефон*</label>
+      <input
+        type="tel"
+        id="phone"
+        class="order-modal-form-input"
+        name="phone"
+        placeholder="380955559922"
+        required
+      />
+
+      <label for="comment" class="order-modal-form-label">Коментар</label>
+      <textarea
+        id="comment"
+        name="comment"
+        class="order-modal-form-textarea"
+        placeholder="Напишіть ваш коментар"
+      ></textarea>
+
+      <button type="submit" class="order-modal-form-submit">Надіслати</button>
+    </form>
+  </div>
+</div>
+
 
   </body>
 </html>
