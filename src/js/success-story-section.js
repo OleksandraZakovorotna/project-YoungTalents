@@ -3,7 +3,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-const mySprite = '/icons.svg';
+const mySprite = '../public/icons.svg';
 
 const API_URL = 'https://paw-hut.b.goit.study/api/feedbacks?limit=6&page=1';
 

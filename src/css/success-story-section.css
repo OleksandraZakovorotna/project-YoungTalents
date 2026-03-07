@@ -4,12 +4,6 @@
   padding: 64px 0;
 }
 
-@media screen and (min-width: 768px) {
-  .feedbacks-section {
-    min-height: 693px;
-  }
-}
-
 @media screen and (min-width: 1280px) {
   .feedbacks-section {
     padding: 80px 0;
