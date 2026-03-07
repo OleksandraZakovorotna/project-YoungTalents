@@ -35,13 +35,19 @@ async function fetchCategories() {
     filterList.innerHTML = markup;
   } catch (error) {
     console.error('Помилка завантаження категорій:', error);
+  } finally {
+    toggleLoader(false);
   }
 }
 
 // 2. Animals
 
 async function fetchAnimals(page = 1, categoryId = '') {
+
+  toggleLoader(true);
+
   const limit = getLimit();
+  
 
   let url = `${API_BASE}/animals?page=${page}&limit=${limit}`;
 
@@ -63,6 +69,8 @@ async function fetchAnimals(page = 1, categoryId = '') {
     }
   } catch (error) {
     console.error('Помилка завантаження тварин:', error);
+  } finally {
+      toggleLoader(false);
   }
 }
 

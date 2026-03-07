@@ -268,3 +268,54 @@
     background: #88765C;
         opacity: 0.3;
 }
+
+.loader {
+    width: 80px;
+    /* було 48px — зробила більшим */
+    height: 80px;
+    border: 3px solid #4A4A4A;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    /* центрує горизонтально */
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FF3D00;
+    width: 10px;
+    /* збільшено */
+    height: 10px;
+    transform: translate(150%, 150%);
+    border-radius: 50%;
+}
+
+.loader::before {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    transform: translate(-150%, -150%);
+}
+
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
