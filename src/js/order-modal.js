@@ -1,5 +1,5 @@
-// import axios from 'axios';
-// import Swal from 'sweetalert2';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const backdrop = document.querySelector('.backdrop');
 const closeModalBtn = document.querySelector('.order-modal-close-btn');

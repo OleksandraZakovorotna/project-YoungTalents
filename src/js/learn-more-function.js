@@ -11,12 +11,11 @@ export function initLearnMoreButtons() {
       image: btn.dataset.img,
       description: btn.dataset.desc,
       age: btn.dataset.age,
-      gender: btn.dataset.sex
+      gender: btn.dataset.sex,
+      healthStatus: btn.dataset.healthStatus,
+      behavior: btn.dataset.behavior
     };
-
+    console.log(btn.dataset)
     openPetModal(pet);
   });
 }
-
-
-
