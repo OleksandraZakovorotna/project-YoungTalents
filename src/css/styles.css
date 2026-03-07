@@ -1,0 +1,26 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./fonts.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./hero-section.css');
+@import url('./pet-list-section.css');
+@import url('./about-us-secion.css');
+@import url('./faq-section.css');
+@import url('./success-story-section.css');
+@import url('./animal-details-modal.css');
+@import url('./order-modal.css');
+@import url('./footer.css');
+
+body.modal-open {
+  overflow: hidden;
+}

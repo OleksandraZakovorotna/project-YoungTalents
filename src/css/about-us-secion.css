@@ -1,0 +1,218 @@
+:root {
+  --swiper-pagination-bottom: 0px;
+  background-color: var(--color-mariner-lightest);
+}
+
+.gallery {
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 20px;
+  overflow: visible;
+}
+
+.gallery__title {
+  margin: 0 auto 40px;
+  text-align: center;
+  font-family: var(--second-family);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1%;
+}
+
+#about-us-secion .slider-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#about-us-secion .about-swiper {
+  width: 100%;
+  height: 402px;
+  overflow: hidden;
+}
+
+#about-us-secion .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  display: flex !important;
+  align-items: flex-end;
+  /* Текст притиснутий до низу */
+  padding: 20px;
+}
+
+#about-us-secion .slide-content {
+  color: var(--color-mariner-lightest);
+  width: 100%;
+  text-align: left;
+}
+
+#about-us-secion .slide-content p {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#about-us-secion .controls-wrapper {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Розносить пагінацію вліво, кнопки вправо */
+  margin-top: 24px;
+}
+
+#about-us-secion .about-swiper-pagination {
+  position: static !important;
+  text-align: left;
+  margin: 0;
+  width: auto !important;
+  display: flex;
+  gap: 8px;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+#about-us-secion .swiper-button-next,
+#about-us-secion .swiper-button-prev {
+  margin: 6px 6px 6px 6px !important;
+  position: static !important;
+  display: flex !important;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  transform: none;
+  background: var(--color-mariner-lighter);
+  border: 1px solid var(--color-mariner-light);
+  border-radius: 8px;
+  color: var(--color-neutral-darkest) !important;
+
+  &.swiper-button-disabled {
+    cursor: auto;
+    opacity: 40%;
+    pointer-events: none;
+    border: 1px solid var(--color-mariner-lightest) !important;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:focus,
+.swiper-button-next:focus,
+.swiper-button-prev:active,
+.swiper-button-next:active {
+  border: 1px solid var(--opacity-neutral-darkest-60);
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+  box-shadow:
+    0px 4px 6px -2px rgba(0, 0, 0, 0.03),
+    inset 0px 12px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+#about-us-secion .swiper-pagination-bullet-active {
+  background: var(--color-neutral-darkest) !important;
+}
+
+/* Планшет (від 768px) */
+@media screen and (min-width: 768px) {
+  .gallery {
+    width: 768px;
+    padding: 64px 32px;
+  }
+
+  .gallery__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  #about-us-secion .about-swiper {
+    height: 500px;
+  }
+
+  #about-us-secion .swiper-slide {
+    padding: 32px;
+  }
+
+  #about-us-secion .slide-content p {
+    font-size: 16px;
+    /*max-width: 80%;*/
+  }
+
+  #about-us-secion .controls-wrapper {
+    height: 28px;
+    justify-content: center;
+  }
+
+  /* Якщо на десктопі стрілки мають бути по боках слайдера, 
+     поверніть їм position: absolute */
+  #about-us-secion .swiper-button-prev {
+    position: absolute !important;
+    left: -34px !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #about-us-secion .swiper-button-next {
+    position: absolute !important;
+    right: -34px !important;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Десктоп (від 1440px) */
+@media screen and (min-width: 1440px) {
+  .gallery {
+    width: 1440px;
+    padding: 80px 0;
+    margin: auto;
+  }
+
+  .gallery__title {
+    max-width: 896px;
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  #about-us-secion .slider-container {
+    width: 1312px;
+  }
+
+  #about-us-secion .about-swiper {
+    height: 753px;
+    width: 1312px;
+  }
+
+  #about-us-secion .slide-content {
+    /* Замість жорстких margin використовуємо padding/max-width */
+    padding: 0 0 64px 64px;
+    width: 548px;
+  }
+
+  #about-us-secion .slide-content p {
+    width: 548px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  #about-us-secion .swiper-slide {
+    padding: 0;
+  }
+}
+
+/* Стилі пагінації */
+#about-us-secion .about-swiper-pagination {
+  position: relative !important;
+  margin-top: 32px;
+}
