@@ -1,0 +1,41 @@
+<div id="loader" class="is-hidden"></div>
+
+<section class="pets-section" id="pet-list-section">
+        
+  <div class="container">
+            
+    <h2 class="section-title">Наші хвостики</h2>
+            
+    <p class="section-subtitle">Вони дуже чекають на знайомство з вами</p>
+            
+    <ul class="filter-list" id="filter-list">
+                
+      <li>
+                    <button class="filter-btn active" data-category="all">
+          Всі
+        </button>
+                  
+      </li>
+              
+    </ul>
+            
+    <ul class="pets-list" id="pets-list"></ul>
+            <button type="button" class="load-more-btn" id="load-more">
+                Показати більше         
+    </button>
+          
+  </div>
+      
+</section>
+
+    <!-- Модальне вікно -->
+    
+<div class="modal-backdrop is-hidden" id="modal-pet">
+        
+  <div class="modal-content">
+            <button type="modal-close" id="modal-close"></button>         
+    <div id="modal-data"></div>
+          
+  </div>
+      
+</div>

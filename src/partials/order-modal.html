@@ -1,0 +1,43 @@
+<div class="backdrop is-hidden">
+  <div class="order-modal-container">
+    <button type="button" class="order-modal-close-btn">
+      <svg width="32" height="32">
+        <use href="../public/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <h2 class="order-modal-title">Залишіть заявку на знайомство</h2>
+
+    <form class="order-modal-form">
+      <label for="name" class="order-modal-form-label">Ім’я*</label>
+      <input
+        type="text"
+        id="name"
+        class="order-modal-form-input"
+        name="name"
+        placeholder="Андрій"
+        required
+      />
+
+      <label for="phone" class="order-modal-form-label">Телефон*</label>
+      <input
+        type="tel"
+        id="phone"
+        class="order-modal-form-input"
+        name="phone"
+        placeholder="380955559922"
+        required
+      />
+
+      <label for="comment" class="order-modal-form-label">Коментар</label>
+      <textarea
+        id="comment"
+        name="comment"
+        class="order-modal-form-textarea"
+        placeholder="Напишіть ваш коментар"
+      ></textarea>
+
+      <button type="submit" class="order-modal-form-submit">Надіслати</button>
+    </form>
+  </div>
+</div>
