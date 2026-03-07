@@ -8,8 +8,7 @@ html {
 }
 
 /* Базовые стили */
-.header {    
-    height: 64px;
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,19 +21,27 @@ html {
 .container {
     display: flex;   
     align-items: center;
-    padding: 0 20px;   
-   
+    padding: 15px 20px;   
+    
 }
  .logo { 
     z-index: 10001; 
 }
 
+.header-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 5px 10px;
+
+}
 /* Бургер кнопка */
 .burger-menu {    
      padding: 0;
     border: none;
     background-color: transparen;
-    display: flex;     
+  display: flex;  
+   
     background: none;
     border: none;
     cursor: pointer;
@@ -46,6 +53,7 @@ html {
      fill: #2f2f37;
 }
 
+/*
  .burger-menu::before, .burger-menu::after {
     content: "";
     position: absolute;
@@ -57,15 +65,15 @@ html {
 
 .burger::before { top: 0; }
 .burger::after { bottom: 0; }
-
- /*Состояние открытого бургера (крестик)*/ 
+*/
+/* Состояние открытого бургера (крестик) */
 .burger.active::before {
      transform: rotate(45deg); top: 9px;
      }
-     
 .burger.active::after { 
     transform: rotate(-45deg); bottom: 9px; 
 }
+
 .header__menu {
     position: fixed;
     top: 0;
@@ -75,35 +83,36 @@ html {
     background: var(--white);
     display: flex;
     flex-direction: column;
-      padding: 0 20px; 
+       
     transition: 0.4s;
     z-index: 1002;
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
 }
-.header__menu {
+.header__menu.active {
   right: 0; /* Показываем */
 }
-.top {
-    height: 64px;
-}
-.logo-top {
-    position: absolute;
-}
+
 .logo { 
     z-index: 1001; 
 }
-.close {    
-    position: absolute;
-   right: 0;
+
+.header__menu  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+        gap: 15px;
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.header__menu  .top .close {    
     border: none;
     background-color: transparen;
-        
-    background: none;
-    border: none;
     cursor: pointer;
-    z-index: 1000;
     
 }
+
 
 .nav__list {
     list-style: none;
@@ -111,7 +120,8 @@ html {
     
 }
 
-.nav__link {   
+.nav__link {
+    display: block;
     padding: 15px;
     text-decoration: none;
     line-height: 1,5px;
@@ -136,77 +146,53 @@ html {
     /* Задержка появления для каждого пункта (используем переменную --i из HTML) */
     transition-delay: calc(0.1s * var(--i));
 } 
-
 /* ДЕЙСТВИЯ ДЛЯ ПЛАНШЕТОВ) */
 @media (min-width: 768px) {
-   
-.top {
-    display: flex;
-    justify-content: space-between;
-}
-.nav {
-   
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-.btn {
-    background: #88765c;
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    text-align: center;
-    border: 1px solid;
-    width: 196px;
-    height: 37px;
+    .header__menu {
+align-items: center;
 }
 }
 /* ДЕЙСТВИЯ ДЛЯ ПК (Desktop) */
 @media screen and (min-width: 1440px){
  .container {
-  display: flex;  
-  min-height: 72px;
-  gap: 30px;   
-  flex-direction: row; 
-  align-items: center;
-  justify-content: space-between;
-  flex: 1 2;
+  padding: 0 64px;
+ height: 72px;
+  gap: 30px;
+    
 }   
-
     .header__menu {
-        display: flex;
-         align-items: center;         
+        position: static;
         width: auto;
         height: auto;
-        margin-left: auto;
+        flex-direction: row;
         background: none;
         box-shadow: none;
-        gap: 30px;        
-         
-          
+        gap: 30px;
           backdrop-filter: none;
-               
+        flex: 1 2;
+        justify-content: space-between;
     }
- .btn {margin-top: 64px;
-        padding: 0;       
+ .btn {
+        padding: 0;
+       display: flex;
       font-size: 16px;
       width: 130px;
       height: 40px;
-      display: flex;
       align-items: center;
+      
       justify-content: center;
     }
     .burger-menu {
         display: none; /* Прячем бургер */
     }
-    .top {
-        display: none; 
-    } 
-      
+    .nav__list {
+        display: flex;
+        gap: 32px;
+    }
+ .nav__link {
+        font-size: 18px;
+        padding: 0;
+    }
     .nav__link {
         font-size: 16px;
         padding: 0;
@@ -216,5 +202,23 @@ html {
         transform: none;
         margin: 0;
     }
- }
+}
 
+
+/* ДЕЙСТВИЯ ДЛЯ ПЛАНШЕТОВ) */
+@media screen and (min-width: 768px) {
+
+}
+
+
+/*ДЕЙСТВИЯ ДЛЯ (Desktop) */
+@media screen and (min-width:1440px) {
+    .header__menu .top {
+        display: none;
+    }
+
+    
+.header-container {
+
+}
+}
