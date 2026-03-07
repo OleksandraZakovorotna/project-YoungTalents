@@ -45,12 +45,6 @@
 
   --font-family: "IBM Plex Sans", sans-serif;
   --second-family: "Open Sans", sans-serif;
-}
-
-
-body {
-  background-color: var(--color-scheme-1-background);
-  color: var(--color-scheme-1-text);
-  font-family: var(--font-family);
-  margin: 0;
+  --hero-overlay: rgba(68, 59, 46, 0.74);
+  --hero-overlay-transparent: rgba(68, 59, 46, 0);
 }
