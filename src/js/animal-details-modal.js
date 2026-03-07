@@ -1,118 +1,97 @@
 import { openOrderModal } from './order-modal.js';
 
-let refs = {};
+const refs = {
+  backdrop: document.querySelector('[data-pet-modal-backdrop]'),
+  closeBtn: document.querySelector('[data-pet-modal-close]'),
+  adoptBtn: document.querySelector('[data-pet-modal-adopt]'),
+
+  img: document.querySelector('[data-pet-modal-img]'),
+  type: document.querySelector('[data-pet-modal-type]'),
+  name: document.querySelector('[data-pet-modal-name]'),
+  meta: document.querySelector('[data-pet-modal-meta]'),
+  desc: document.querySelector('[data-pet-modal-desc]'),
+  health: document.querySelector('[data-pet-modal-health]'),
+  behavior: document.querySelector('[data-pet-modal-behavior]'),
+};
+
 let currentPet = null;
-
-function getRefs() {
-  const backdrop = document.querySelector('[data-pet-modal-backdrop]');
-
-  // Якщо модалка ще не вставилась в DOM — повертаємо null
-  if (!backdrop) return null;
-
-  return {
-    backdrop,
-    closeBtn: backdrop.querySelector('[data-pet-modal-close]'),
-    adoptBtn: backdrop.querySelector('[data-pet-modal-adopt]'),
-
-    img: backdrop.querySelector('[data-pet-modal-img]'),
-    type: backdrop.querySelector('[data-pet-modal-type]'),
-    name: backdrop.querySelector('[data-pet-modal-name]'),
-    meta: backdrop.querySelector('[data-pet-modal-meta]'),
-    desc: backdrop.querySelector('[data-pet-modal-desc]'),
-    health: backdrop.querySelector('[data-pet-modal-health]'),
-    behavior: backdrop.querySelector('[data-pet-modal-behavior]'),
-  };
-}
 
 // scroll lock
 function lockScroll() {
-  document.body.classList.add('modal-open');
+  document.body.classList.add('modal-open');
 }
 
 function unlockScroll() {
-  document.body.classList.remove('modal-open');
+  document.body.classList.remove('modal-open');
 }
 
-// close handlers
+//  close handlers 
 function onEsc(e) {
-  if (e.key === 'Escape') closePetModal();
+  if (e.key === 'Escape') closePetModal();
 }
 
 function onBackdropClick(e) {
-  if (e.target === refs.backdrop) closePetModal();
+  if (e.target === refs.backdrop) closePetModal();
 }
 
 function onCloseClick() {
-  closePetModal();
+  closePetModal();
 }
 
 function onAdoptClick() {
-  if (!currentPet) return;
+  closePetModal();
 
-  closePetModal();
-
-  if (typeof openOrderModal === 'function') {
-    openOrderModal(currentPet);
-  }
+  if (typeof openOrderModal === 'function') {
+    openOrderModal(currentPet);
+  }
 }
 
-// fill content
+// fill content 
 function fillModal(pet) {
-  const imgSrc = pet?.image || pet?.img || pet?.photo || pet?.avatar || null;
+const imgSrc = pet.image || pet.img || pet.photo || pet.avatar || '';
+  refs.img.src = imgSrc;
+  refs.img.alt = pet.name ? `Фото: ${pet.name}` : 'Фото тварини';
 
-  if (imgSrc) {
-    refs.img.src = imgSrc;
-    refs.img.alt = pet?.name ? `Фото: ${pet.name}` : 'Фото тварини';
-  } else {
-    // Якщо бекенд не дав зображення — прибираємо src щоб не було "битого" img
-    refs.img.removeAttribute('src');
-    refs.img.alt = 'Фото тварини';
-  }
+  refs.type.textContent = pet.type || pet.species || 'Тварина';
+  refs.name.textContent = pet.name || 'Без клички';
 
-  refs.type.textContent = pet?.type || pet?.species || 'Тварина';
-  refs.name.textContent = pet?.name || 'Без клички';
+  const age = pet.age ?? '—';
+  const sex = pet.sex ?? pet.gender ?? '—';
+  refs.meta.textContent = `${age} • ${sex}`;
 
-  const age = pet?.age ?? '—';
-  const sex = pet?.sex ?? pet?.gender ?? '—';
-  refs.meta.textContent = `${age} • ${sex}`;
+  refs.desc.textContent = pet.description ?? pet.desc ?? 'Опис відсутній.';
+  refs.health.textContent = pet.healthStatus ?? 'Інформація відсутня.';
+  refs.behavior.textContent = pet.behavior ?? 'Інформація відсутня.';
 
-  refs.desc.textContent = pet?.description || pet?.desc || 'Опис відсутній.';
-  refs.health.textContent = pet?.health || 'Інформація відсутня.';
-  refs.behavior.textContent = pet?.behavior || 'Інформація відсутня.';
+  console.log(pet);
 }
 
-// public API
+//  public API  
 export function openPetModal(pet) {
-  const newRefs = getRefs();
-  if (!newRefs) return;
+  if (!refs.backdrop) return;
 
-  refs = newRefs;
-  currentPet = pet;
+  currentPet = pet;
+  fillModal(pet);
 
-  fillModal(pet);
+  refs.backdrop.classList.remove('is-hidden');
+  lockScroll();
 
-  refs.backdrop.classList.remove('is-hidden');
-  lockScroll();
-
-  window.addEventListener('keydown', onEsc);
-  refs.backdrop.addEventListener('click', onBackdropClick);
-
-  // перевірки на випадок якщо кнопок нема в DOM (щоб не падало)
-  if (refs.closeBtn) refs.closeBtn.addEventListener('click', onCloseClick);
-  if (refs.adoptBtn) refs.adoptBtn.addEventListener('click', onAdoptClick);
+  window.addEventListener('keydown', onEsc);
+  refs.backdrop.addEventListener('click', onBackdropClick);
+  refs.closeBtn.addEventListener('click', onCloseClick);
+  refs.adoptBtn.addEventListener('click', onAdoptClick);
 }
 
 export function closePetModal() {
-  if (!refs.backdrop) return;
+  if (!refs.backdrop) return;
 
-  refs.backdrop.classList.add('is-hidden');
-  unlockScroll();
+  refs.backdrop.classList.add('is-hidden');
+  unlockScroll();
 
-  window.removeEventListener('keydown', onEsc);
-  refs.backdrop.removeEventListener('click', onBackdropClick);
+  window.removeEventListener('keydown', onEsc);
+  refs.backdrop.removeEventListener('click', onBackdropClick);
+  refs.closeBtn.removeEventListener('click', onCloseClick);
+  refs.adoptBtn.removeEventListener('click', onAdoptClick);
 
-  if (refs.closeBtn) refs.closeBtn.removeEventListener('click', onCloseClick);
-  if (refs.adoptBtn) refs.adoptBtn.removeEventListener('click', onAdoptClick);
-
-  currentPet = null;
+  currentPet = null;
 }
