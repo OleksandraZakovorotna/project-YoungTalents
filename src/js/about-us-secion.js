@@ -6,63 +6,95 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const img = './img'
+import slide11desk from '../img/about-img/slide01-desk.jpg';
+import slide12desk from '../img/about-img/slide01-desk@2x.jpg';
+import slide11tab from '../img/about-img/slide01-tab.jpg';
+import slide12tab from '../img/about-img/slide01-tab@2x.jpg';
+import slide11mob from '../img/about-img/slide01-mob.jpg';
+import slide12mob from '../img/about-img/slide01-mob@2x.jpg';
+
+import slide21desk from '../img/about-img/slide02-desk.jpg';
+import slide22desk from '../img/about-img/slide02-desk@2x.jpg';
+import slide21tab from '../img/about-img/slide02-tab.jpg';
+import slide22tab from '../img/about-img/slide02-tab@2x.jpg';
+import slide21mob from '../img/about-img/slide02-mob.jpg';
+import slide22mob from '../img/about-img/slide02-mob@2x.jpg';
+
+import slide31desk from '../img/about-img/slide03-desk.jpg';
+import slide32desk from '../img/about-img/slide03-desk@2x.jpg';
+import slide31tab from '../img/about-img/slide03-tab.jpg';
+import slide32tab from '../img/about-img/slide03-tab@2x.jpg';
+import slide31mob from '../img/about-img/slide03-mob.jpg';
+import slide32mob from '../img/about-img/slide03-mob@2x.jpg';
+
+import slide41desk from '../img/about-img/slide04-desk.jpg';
+import slide42desk from '../img/about-img/slide04-desk@2x.jpg';
+import slide41tab from '../img/about-img/slide04-tab.jpg';
+import slide42tab from '../img/about-img/slide04-tab@2x.jpg';
+import slide41mob from '../img/about-img/slide04-mob.jpg';
+import slide42mob from '../img/about-img/slide04-mob@2x.jpg';
+
+import slide51desk from '../img/about-img/slide05-desk.jpg';
+import slide52desk from '../img/about-img/slide05-desk@2x.jpg';
+import slide51tab from '../img/about-img/slide05-tab.jpg';
+import slide52tab from '../img/about-img/slide05-tab@2x.jpg';
+import slide51mob from '../img/about-img/slide05-mob.jpg';
+import slide52mob from '../img/about-img/slide05-mob@2x.jpg';
 
 const images = [
   {
-    slided1: `${img}/about-img/slide01-desk.jpg`,
-    slided2: `${img}/about-img/slide01-desk@2x.jpg`,
-    slidet1: `${img}/about-img/slide01-tab.jpg`,
-    slidet2: `${img}/about-img/slide01-tab@2x.jpg`,
-    slidem1: `${img}/about-img/slide01-mob.jpg`,
-    slidem2: `${img}/about-img/slide01-mob@2x.jpg`,
+    slided1: slide11desk,
+    slided2: slide12desk,
+    slidet1: slide11tab,
+    slidet2: slide12tab,
+    slidem1: slide11mob,
+    slidem2: slide12mob,
     texta:
       'Все почалося у 2015 році з кількох небайдужих людей та одного врятованого собаки. Сьогодні ми — один з найбільших притулків у регіоні, але наша мета незмінна: дати другий шанс тим, кого зрадили.',
   },
   {
-    slided1: `${img}/about-img/slide02-desk.jpg`,
-    slided2: `${img}/about-img/slide02-desk@2x.jpg`,
-    slidet1: `${img}/about-img/slide02-tab.jpg`,
-    slidet2: `${img}/about-img/slide02-tab@2x.jpg`,
-    slidem1: `${img}/about-img/slide02-mob.jpg`,
-    slidem2: `${img}/about-img/slide02-mob@2x.jpg`,
+    slided1: slide21desk,
+    slided2: slide22desk,
+    slidet1: slide21tab,
+    slidet2: slide22tab,
+    slidem1: slide21mob,
+    slidem2: slide22mob,
     texta:
       'Ми рятуємо, реабілітуємо та знаходимо люблячі родини для безпритульних тварин. Наша мета — не просто дати прихисток, а й забезпечити кожному "хвостику" щасливе та повноцінне життя в новій родині.',
   },
   {
-    slided1: `${img}/about-img/slide03-desk.jpg`,
-    slided2: `${img}/about-img/slide03-desk@2x.jpg`,
-    slidet1: `${img}/about-img/slide03-tab.jpg`,
-    slidet2: `${img}/about-img/slide03-tab@2x.jpg`,
-    slidem1: `${img}/about-img/slide03-mob.jpg`,
-    slidem2: `${img}/about-img/slide03-mob@2x.jpg`,
+    slided1: slide31desk,
+    slided2: slide32desk,
+    slidet1: slide31tab,
+    slidet2: slide32tab,
+    slidem1: slide31mob,
+    slidem2: slide32mob,
     texta:
       'Хатинка Лапок" — це команда професійних ветеринарів, кінологів та десятків волонтерів, які щодня вкладають свою душу та час у турботу про наших підопічних. Ми працюємо 24/7, бо їхнє життя залежить від нас.',
   },
   {
-    slided1: `${img}/about-img/slide04-desk.jpg`,
-    slided2: `${img}/about-img/slide04-desk@2x.jpg`,
-    slidet1: `${img}/about-img/slide04-tab.jpg`,
-    slidet2: `${img}/about-img/slide04-tab@2x.jpg`,
-    slidem1: `${img}/about-img/slide04-mob.jpg`,
-    slidem2: `${img}/about-img/slide04-mob@2x.jpg`,
+    slided1: slide41desk,
+    slided2: slide42desk,
+    slidet1: slide41tab,
+    slidet2: slide42tab,
+    slidem1: slide41mob,
+    slidem2: slide42mob,
     texta:
       'Ми створили безпечний та комфортний простір. Кожна тварина отримує якісне харчування, своєчасну ветеринарну допомогу, проходить соціалізацію та гуляє на спеціально обладнаних майданчиках.',
   },
   {
-    slided1: `${img}/about-img/slide05-desk.jpg`,
-    slided2: `${img}/about-img/slide05-desk@2x.jpg`,
-    slidet1: `${img}/about-img/slide05-tab.jpg`,
-    slidet2: `${img}/about-img/slide05-tab@2x.jpg`,
-    slidem1: `${img}/about-img/slide05-mob.jpg`,
-    slidem2: `${img}/about-img/slide05-mob@2x.jpg`,
+    slided1: slide51desk,
+    slided2: slide52desk,
+    slidet1: slide51tab,
+    slidet2: slide52tab,
+    slidem1: slide51mob,
+    slidem2: slide52mob,
     texta:
       'Ваша допомога — безцінна. Ви можете взяти тваринку додому, стати волонтером, допомогти фінансово або інформаційно. Кожен маленький внесок наближає нас до великої мети — світу без безпритульних тварин.',
   },
 ];
 
 const slidu = document.querySelector('.swiper-wrapper');
-
 function getAdaptiveImage(imgObj) {
   const isRetina = window.devicePixelRatio > 1;
   const width = window.innerWidth;
