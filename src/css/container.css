@@ -1,9 +1,9 @@
-/* Styles for Mobile devices */
 .container {
   min-width: 320px;
   max-width: 375px;
   padding: 0 20px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
     padding: 0 64px;
