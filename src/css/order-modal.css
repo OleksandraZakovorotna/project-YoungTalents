@@ -202,3 +202,31 @@
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+/* Invalid States */
+.order-modal-form-input:focus,
+.order-modal-form-textarea:focus {
+  border: 1px solid #88765c;
+}
+.order-modal-form-input:not(:placeholder-shown):invalid,
+.order-modal-form-textarea:not(:placeholder-shown):invalid {
+  border: 1px solid #ae0000;
+}
+.order-modal-error-text {
+  font-size: 12px;
+  color: #ae0000;
+  margin-top: 4px;
+  display: none;
+}
+.order-modal-form-input:not(:placeholder-shown):invalid
+  + .order-modal-error-text,
+.order-modal-form-textarea:not(:placeholder-shown):invalid
+  + .order-modal-error-text {
+  display: block;
+}
+.order-modal-input-container,
+.order-modal-textarea-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

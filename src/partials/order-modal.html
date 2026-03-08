@@ -10,32 +10,43 @@
 
     <form class="order-modal-form">
       <label for="name" class="order-modal-form-label">Ім’я*</label>
-      <input
-        type="text"
-        id="name"
-        class="order-modal-form-input"
-        name="name"
-        placeholder="Андрій"
-        required
-      />
+      <div class="order-modal-input-container">
+        <input
+          type="text"
+          id="name"
+          class="order-modal-form-input"
+          name="name"
+          placeholder="Андрій"
+          required
+        />
+        <p class="order-modal-error-text">Error text</p>
+      </div>
 
       <label for="phone" class="order-modal-form-label">Телефон*</label>
-      <input
-        type="tel"
-        id="phone"
-        class="order-modal-form-input"
-        name="phone"
-        placeholder="380955559922"
-        required
-      />
+      <div class="order-modal-input-container">
+        <input
+          type="tel"
+          id="phone"
+          class="order-modal-form-input"
+          name="phone"
+          placeholder="380955559922"
+          required
+          minlength="12"
+        />
+        <p class="order-modal-error-text">Error text</p>
+      </div>
 
       <label for="comment" class="order-modal-form-label">Коментар</label>
-      <textarea
-        id="comment"
-        name="comment"
-        class="order-modal-form-textarea"
-        placeholder="Напишіть ваш коментар"
-      ></textarea>
+      <div class="order-modal-textarea-container">
+        <textarea
+          id="comment"
+          name="comment"
+          class="order-modal-form-textarea"
+          placeholder="Напишіть ваш коментар"
+          required
+        ></textarea>
+        <p class="order-modal-error-text">Error text</p>
+      </div>
 
       <button type="submit" class="order-modal-form-submit">Надіслати</button>
     </form>
