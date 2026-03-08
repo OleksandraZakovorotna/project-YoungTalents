@@ -52,15 +52,6 @@ html {
 }
 
 
- .burger-menu::before, .burger-menu::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: var(--dark);
-    transition: 0.3s;
-}
-
 .burger::before { top: 0; }
 .burger::after { bottom: 0; }
 
@@ -157,10 +148,11 @@ btn:disabled {
 } 
 /* ДЕЙСТВИЯ ДЛЯ ПЛАНШЕТОВ) */
 @media (min-width: 768px) {
+    
     .header__menu {
-align-items: center;
-justify-content: center;
+text-align: center;
 }
+
 .btn {         
       max-width: 196px;
       height: 37px;  
