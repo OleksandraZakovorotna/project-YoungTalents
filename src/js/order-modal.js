@@ -9,8 +9,7 @@ let currentAnimalId = null;
 
 export function openOrderModal(animalId) {
   //TODO: прописати коректну змінну для id тварини замість animalId
-  if (!backdrop) return;
-
+  if (!backdrop || !animalId) return;
   currentAnimalId = animalId; //TODO: прописати коректну змінну для id тварини замість animalId
 
   backdrop.classList.remove('is-hidden');
@@ -37,6 +36,10 @@ export function closeOrderModal() {
   formEl.reset();
 }
 
+function formatPhone(phone) {
+  return phone.replace(/\D/g, ''); // removes everything except digits
+}
+
 async function handleFormSubmit(e) {
   e.preventDefault();
 
@@ -44,7 +47,7 @@ async function handleFormSubmit(e) {
 
   const formData = {
     name: name.value.trim(),
-    phone: phone.value.trim(),
+    phone: formatPhone(phone.value.trim()),
     comment: comment.value.trim(),
     animalId: currentAnimalId, //TODO: прописати коректну змінну для id тварини замість animalId
   };
@@ -64,6 +67,7 @@ async function handleFormSubmit(e) {
 
     closeOrderModal();
   } catch (error) {
+    console.log(error);
     const errorMessage =
       error.response?.data?.message || 'Щось пішло не так. Спробуйте пізніше.';
 
