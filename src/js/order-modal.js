@@ -40,6 +40,7 @@ function formatPhone(phone) {
   return phone.replace(/\D/g, ''); // removes everything except digits
 }
 
+
 async function handleFormSubmit(e) {
   e.preventDefault();
 
@@ -67,7 +68,7 @@ async function handleFormSubmit(e) {
 
     closeOrderModal();
   } catch (error) {
-    console.log(error);
+    console.log(error)
     const errorMessage =
       error.response?.data?.message || 'Щось пішло не так. Спробуйте пізніше.';
 
