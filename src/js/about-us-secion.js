@@ -6,40 +6,40 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import slide11desk from '../img/about-img/slide01-desk.jpg';
-import slide12desk from '../img/about-img/slide01-desk@2x.jpg';
-import slide11tab from '../img/about-img/slide01-tab.jpg';
-import slide12tab from '../img/about-img/slide01-tab@2x.jpg';
-import slide11mob from '../img/about-img/slide01-mob.jpg';
-import slide12mob from '../img/about-img/slide01-mob@2x.jpg';
+import slide11desk from '../img/about-img/slide01-desk.webp';
+import slide12desk from '../img/about-img/slide01-desk@2x.webp';
+import slide11tab from '../img/about-img/slide01-tab.webp';
+import slide12tab from '../img/about-img/slide01-tab@2x.webp';
+import slide11mob from '../img/about-img/slide01-mob.webp';
+import slide12mob from '../img/about-img/slide01-mob@2x.webp';
 
-import slide21desk from '../img/about-img/slide02-desk.jpg';
-import slide22desk from '../img/about-img/slide02-desk@2x.jpg';
-import slide21tab from '../img/about-img/slide02-tab.jpg';
-import slide22tab from '../img/about-img/slide02-tab@2x.jpg';
-import slide21mob from '../img/about-img/slide02-mob.jpg';
-import slide22mob from '../img/about-img/slide02-mob@2x.jpg';
+import slide21desk from '../img/about-img/slide02-desk.webp';
+import slide22desk from '../img/about-img/slide02-desk@2x.webp';
+import slide21tab from '../img/about-img/slide02-tab.webp';
+import slide22tab from '../img/about-img/slide02-tab@2x.webp';
+import slide21mob from '../img/about-img/slide02-mob.webp';
+import slide22mob from '../img/about-img/slide02-mob@2x.webp';
 
-import slide31desk from '../img/about-img/slide03-desk.jpg';
-import slide32desk from '../img/about-img/slide03-desk@2x.jpg';
-import slide31tab from '../img/about-img/slide03-tab.jpg';
-import slide32tab from '../img/about-img/slide03-tab@2x.jpg';
-import slide31mob from '../img/about-img/slide03-mob.jpg';
-import slide32mob from '../img/about-img/slide03-mob@2x.jpg';
+import slide31desk from '../img/about-img/slide03-desk.webp';
+import slide32desk from '../img/about-img/slide03-desk@2x.webp';
+import slide31tab from '../img/about-img/slide03-tab.webp';
+import slide32tab from '../img/about-img/slide03-tab@2x.webp';
+import slide31mob from '../img/about-img/slide03-mob.webp';
+import slide32mob from '../img/about-img/slide03-mob@2x.v';
 
-import slide41desk from '../img/about-img/slide04-desk.jpg';
-import slide42desk from '../img/about-img/slide04-desk@2x.jpg';
-import slide41tab from '../img/about-img/slide04-tab.jpg';
-import slide42tab from '../img/about-img/slide04-tab@2x.jpg';
-import slide41mob from '../img/about-img/slide04-mob.jpg';
-import slide42mob from '../img/about-img/slide04-mob@2x.jpg';
+import slide41desk from '../img/about-img/slide04-desk.webp';
+import slide42desk from '../img/about-img/slide04-desk@2x.webp';
+import slide41tab from '../img/about-img/slide04-tab.webp';
+import slide42tab from '../img/about-img/slide04-tab@2x.webp';
+import slide41mob from '../img/about-img/slide04-mob.webp';
+import slide42mob from '../img/about-img/slide04-mob@2x.webp';
 
-import slide51desk from '../img/about-img/slide05-desk.jpg';
-import slide52desk from '../img/about-img/slide05-desk@2x.jpg';
-import slide51tab from '../img/about-img/slide05-tab.jpg';
-import slide52tab from '../img/about-img/slide05-tab@2x.jpg';
-import slide51mob from '../img/about-img/slide05-mob.jpg';
-import slide52mob from '../img/about-img/slide05-mob@2x.jpg';
+import slide51desk from '../img/about-img/slide05-desk.webp';
+import slide52desk from '../img/about-img/slide05-desk@2x.webp';
+import slide51tab from '../img/about-img/slide05-tab.webp';
+import slide52tab from '../img/about-img/slide05-tab@2x.webp';
+import slide51mob from '../img/about-img/slide05-mob.webp';
+import slide52mob from '../img/about-img/slide05-mob@2x.webp';
 
 const images = [
   {
