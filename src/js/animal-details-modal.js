@@ -39,11 +39,10 @@ function onCloseClick() {
 }
 
 function onAdoptClick() {
+  const petToOrder = currentPet._id;
+  console.log(currentPet)
   closePetModal();
-
-  if (typeof openOrderModal === 'function') {
-    openOrderModal(currentPet);
-  }
+  openOrderModal(petToOrder);
 }
 
 // fill content 

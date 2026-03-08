@@ -1,4 +1,4 @@
-import { initLearnMoreButtons } from './learn-more-function.js';
+import { openPetModal } from './animal-details-modal.js';
 
 const API_BASE = 'https://paw-hut.b.goit.study/api';
 const petsList = document.getElementById('pets-list');
@@ -8,6 +8,7 @@ const loader = document.getElementById('loader');
 
 let currentPage = 1;
 let currentCategoryId = '';
+const animalsCache = {};
 
 const getLimit = () => (window.innerWidth >= 1440 ? 9 : 8);
 
@@ -15,8 +16,6 @@ const toggleLoader = show => {
   if (show) loader.classList.remove('is-hidden');
   else loader.classList.add('is-hidden');
 };
-
-// 1. Category
 
 async function fetchCategories() {
   try {
@@ -60,7 +59,10 @@ async function fetchAnimals(page = 1, categoryId = '') {
     const data = await response.json();
     const animals = data.animals || [];
     const totalItems = data.totalItems || 0;
+
     renderCards(animals, page === 1);
+    cacheAnimals(animals);
+
     const currentDisplayed = petsList.children.length;
     if (currentDisplayed >= totalItems || animals.length === 0) {
       loadMoreBtn.style.display = 'none';
@@ -80,7 +82,7 @@ function renderCards(animals, isNewSearch) {
   const markup = animals
     .map(
       pet => `
-    <li class="pet-card">
+    <li class="pet-card" data-pet-id="${pet._id}">
       <picture class="pet-img-thumb">
         <source srcset="${pet.image}" media="(min-width: 320px)">
         <img src="${pet.image}" alt="${pet.name}" class="pet-img" loading="lazy">
@@ -99,18 +101,11 @@ function renderCards(animals, isNewSearch) {
           <div class="pet-descr">
         <p class="pet-short-desc">${pet.shortDescription}</p>
         </div>
-         <button
-        type="button"
-        class="learn-more-btn"
-        data-name="${pet.name}"
-        data-species="${pet.species}"
-        data-img="${pet.image}"
-        data-desc="${pet.shortDescription}"
-        data-age="${pet.age}"
-        data-sex="${pet.gender}"
-        data-behavior="${pet.behavior}"
-        data-health-status="${pet.healthStatus}"
-        >Дізнатись більше
+        <button
+          type="button"
+          class="learn-more-btn"
+        >
+          Дізнатись більше
         </button>
     </li>
   `
@@ -122,6 +117,12 @@ function renderCards(animals, isNewSearch) {
   } else {
     petsList.insertAdjacentHTML('beforeend', markup);
   }
+}
+
+export function cacheAnimals(animals) {
+  animals.forEach(pet => {
+    animalsCache[pet._id] = pet;
+  });
 }
 
 // 4. Event
@@ -143,9 +144,20 @@ loadMoreBtn.addEventListener('click', async () => {
   await fetchAnimals(currentPage, currentCategoryId);
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
   fetchCategories();
   fetchAnimals(1, '');
-  initLearnMoreButtons(); 
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.learn-more-btn');
+    if (!btn) return;
+  
+    const petCard = btn.closest('.pet-card');
+    const petId = petCard.dataset.petId;
+    const pet = animalsCache[petId]; 
+  
+    if (pet) {
+      openPetModal(pet); 
+    }
+  });
 });
