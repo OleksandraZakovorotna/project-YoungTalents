@@ -5,8 +5,7 @@
 
 .gallery {
   width: 100%;
-  margin: 0 auto;
-  padding: 64px 20px;
+  padding: 64px 0;
   overflow: visible;
 }
 
