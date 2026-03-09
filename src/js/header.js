@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.header__menu');
     const closeBtn = document.querySelector('.close');
     const navLinks = document.querySelectorAll('.nav__link'); // Находим ссылки
+    const getFriendBtn = document.querySelector('.btn')
 
     const openMenu = () => {
         menu.classList.add('active');
@@ -29,4 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
+
+    if (getFriendBtn) {
+        getFriendBtn.addEventListener('click', closeMenu);
+    }   
 });
