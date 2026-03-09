@@ -51,13 +51,13 @@ http://localhost:5173
 
 ### 💻 Над проєктом працювали:
 
-Тімлід - [Олександра Заковоротна](https://github.com/OleksandraZakovorotna)
-Скрам-майстер - [Ася Скоромна](https://github.com/asia-skoromna458) Технічна
-підтримк тімліда - [Арсен Даценко](https://github.com/arstrongDV) Розробник -
-[Андрій Довгополюк](https://github.com/andreyk0q) Розробник -
-[Марина Семеренко](https://github.com/Marina-Semerenko) Розробник -
-[Неля Репко](https://github.com/NelaRepko) Розробник -
-[Олександр Денісюк](https://github.com/OleksandrDenysiuk95-hub) Розробник -
-[Олена Бурилкіна](https://github.com/olena-js) Розробник -
-[Олександр Осипчук](https://github.com/SashaOsp) Розробник -
-[Надія Яковлєва](https://github.com/YaManyunya)
+- Тімлід - [Олександра](https://github.com/OleksandraZakovorotna)
+- Скрам-майстер - [Ася](https://github.com/asia-skoromna458)
+- Технічна підтримк тімліда - [Арсен](https://github.com/arstrongDV)
+- Розробник - [Андрій](https://github.com/andreyk0q)
+- Розробник - [Марина](https://github.com/Marina-Semerenko)
+- Розробник - [Нелz](https://github.com/NelaRepko)
+- Розробник - [Олександр](https://github.com/OleksandrDenysiuk95-hub) -
+- Розробник - [Олена](https://github.com/olena-js)
+- Розробник - [Олександр](https://github.com/SashaOsp)
+- Розробник - [Надія](https://github.com/YaManyunya)
