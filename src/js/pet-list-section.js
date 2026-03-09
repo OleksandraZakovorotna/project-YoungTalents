@@ -82,10 +82,9 @@ function renderCards(animals, isNewSearch) {
     .map(
       pet => `
     <li class="pet-card" data-pet-id="${pet._id}">
-      <picture class="pet-img-thumb">
-        <source srcset="${pet.image}" media="(min-width: 320px)">
-        <img src="${pet.image}" alt="${pet.name}" class="pet-img" loading="lazy">
-      </picture>
+      <div class="pet-img-thumb">
+        <img  src="${pet.image}" alt="${pet.name}" class="pet-img" loading="lazy">
+      </div>
       <div class="pet-content">
         <p class="pet-species">${pet.species}</p>
         <h3 class="pet-name">${pet.name}</h3>
