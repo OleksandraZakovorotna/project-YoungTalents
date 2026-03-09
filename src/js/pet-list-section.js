@@ -81,31 +81,23 @@ function renderCards(animals, isNewSearch) {
   const markup = animals
     .map(
       pet => `
-    <li class="pet-card" data-pet-id="${pet._id}">
-      <div class="pet-img-thumb">
-        <img  src="${pet.image}" alt="${pet.name}" class="pet-img" loading="lazy">
-      </div>
-      <div class="pet-content">
-        <p class="pet-species">${pet.species}</p>
-        <h3 class="pet-name">${pet.name}</h3>
-        <ul class="pet-tags">
-          ${pet.categories ? pet.categories.map(c => `<li>${c.name}</li>`).join('\n') : ''}
-        </ul>
-        
-      <div class="pet-meta">
-          <span>${pet.age}</span>  <span>${pet.gender}</span>
-          </div>
-        </div>
-          <div class="pet-descr">
-        <p class="pet-short-desc">${pet.shortDescription}</p>
-        </div>
-        <button
-          type="button"
-          class="learn-more-btn"
-        >
-          Дізнатись більше
-        </button>
-    </li>
+<li class="pet-card" data-pet-id="${pet._id}">
+  <div class="pet-img-thumb">
+    <img src="${pet.image}" alt="${pet.name}" class="pet-img" loading="lazy">
+  </div>
+  <div class="pet-card-content">
+    <p class="pet-species">${pet.species}</p>
+    <h3 class="pet-name">${pet.name}</h3>
+    <ul class="pet-tags">
+      ${pet.categories ? pet.categories.map(c => `<li>${c.name}</li>`).join('') : ''}
+    </ul>
+    <div class="pet-meta">
+      <span>${pet.age}</span> <span>${pet.gender}</span>
+    </div>
+    <p class="pet-short-desc">${pet.shortDescription}</p>
+  </div>
+  <button type="button" class="learn-more-btn">Дізнатись більше</button>
+</li>
   `
     )
     .join('');

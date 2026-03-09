@@ -82,15 +82,18 @@
     font-weight: 500;
 }
 
-
+.pet-card-content {
+    display: flex;
+    flex-direction: column;
+}
 
 
 
 /*картки з тваринами*/
 .pet-img-thumb {
+    width: 100%;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 16px;
 }
 
 /* .pet-card>*+* {
@@ -99,17 +102,13 @@
 
 .pet-card {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: space-between;
     border-radius: 16px;
     padding: 12px;
+    gap: 16px;
     width: 335px;
-    height: 528px;
     background-color: var(--color-scheme-1-foreground);
-
-
-
 }
 
 @media (min-width: 768px) {
@@ -124,6 +123,11 @@
     .pet-card {
         width: 416px;
         height: 604px;
+    }
+
+    .pet-img-thumb {
+        width: 392px;
+        height: 309px;
     }
 
 }
