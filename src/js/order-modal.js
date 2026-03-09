@@ -48,12 +48,9 @@ async function handleFormSubmit(e) {
   const formData = {
     name: name.value.trim(),
     phone: formatPhone(phone.value.trim()),
+    comment: comment.value.trim() || 'No comment',
     animalId: currentAnimalId,
   };
-
-  if (comment.value.trim() !== '') {
-    formData.comment = comment.value.trim();
-  }
 
   try {
     const response = await axios.post(
