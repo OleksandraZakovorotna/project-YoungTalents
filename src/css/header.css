@@ -338,6 +338,7 @@ btn:disabled {
         height: 72px;
         top: auto;
         right: auto;
+        padding: 5px 0;
     }
 
 
@@ -426,7 +427,7 @@ btn:disabled {
     justify-content: space-between;
     gap: 15px;
     width: 100%;
-    padding: 5px 20px;
+    padding: 5px 0;
     margin-bottom: 40px;
 }
 
