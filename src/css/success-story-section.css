@@ -1,10 +1,10 @@
 /* ===== Section ===== */
 .feedbacks-section {
-  background-color: var(--color-mariner-lightest);
+  background: var(--color-scheme-1-background);
   padding: 64px 0;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .feedbacks-section {
     padding: 80px 0;
   }
@@ -25,7 +25,7 @@
   color: var(--color-neutral-darkest);
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .feedbacks-title {
     font-size: 48px;
     max-width: 500px;
@@ -42,7 +42,7 @@
   color: var(--color-neutral-darkest);
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .feedbacks-subtitle {
     font-size: 18px;
   }
@@ -75,6 +75,7 @@
   height: 100%;
   box-sizing: border-box;
   justify-content: space-between;
+  gap: 32px;
 }
 
 
@@ -87,7 +88,7 @@
   line-height: 150%;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 14400px) {
   #success-story-section .feedback-text {
     font-size: 20px;
   }
@@ -100,19 +101,18 @@
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  margin-top: 32px;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   #success-story-section .feedback-author {
     font-size: 16px;
   }
 }
 
 /* ===== Rating (your SVG stars) ===== */
-#success-story-section .rating-container {
-  margin-bottom: 32px;
-}
+/* #success-story-section .rating-container {
+
+} */
 
 #success-story-section .stars-wrapper {
   display: flex;

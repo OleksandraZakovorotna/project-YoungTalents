@@ -292,7 +292,7 @@
 
 @media (min-width: 1440px) {
     .load-more-btn {
-        width: 192px;
+        min-width: 192px;
         height: 48px;
         margin: 0 auto;
     }
@@ -326,6 +326,7 @@ position: fixed;
     border-radius: 50%;
     z-index: 2000;
     animation: rotation 1s linear infinite;
+    color: #4A4A4A;
 }
 
 .loader-pet-list::after,
@@ -335,7 +336,7 @@ position: fixed;
     position: absolute;
     left: 0;
     top: 0;
-    background: #FF3D00;
+    background: #4A4A4A;
     width: 6px;
     height: 6px;
     transform: translate(150%, 150%);
